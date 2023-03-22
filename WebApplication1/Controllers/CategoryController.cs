@@ -54,7 +54,7 @@ namespace desafio.Controllers
         [Route("categories/{id}")]
         public async Task<ActionResult> UpdateAsync(int id, [FromBody] Category category)
         {
-            if (category == null || id != category.Id)
+            if (category == null)
             {
                 return BadRequest();
             }
